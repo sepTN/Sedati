@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSedati));
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPath = new System.Windows.Forms.TextBox();
@@ -42,7 +43,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnPurgeData = new System.Windows.Forms.Button();
             this.btnQuickNote = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -195,15 +196,16 @@
             this.btnQuickNote.UseVisualStyleBackColor = true;
             this.btnQuickNote.Click += new System.EventHandler(this.btnQuickNote_Click);
             // 
-            // button1
+            // btnAbout
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(283, 536);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "About";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAbout.Location = new System.Drawing.Point(283, 536);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(109, 23);
+            this.btnAbout.TabIndex = 15;
+            this.btnAbout.Text = "About";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // label3
             // 
@@ -242,7 +244,7 @@
             this.ClientSize = new System.Drawing.Size(947, 569);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnQuickNote);
             this.Controls.Add(this.btnPurgeData);
             this.Controls.Add(this.txtSearch);
@@ -258,6 +260,7 @@
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvTable);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSedati";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sedati";
@@ -284,7 +287,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnPurgeData;
         private System.Windows.Forms.Button btnQuickNote;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label5;

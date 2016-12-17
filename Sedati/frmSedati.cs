@@ -87,7 +87,7 @@ namespace Sedati
 
             string systemname = raw[1].Split(';')[0];
             string stationname = raw[1].Split(';')[1];
-            string date = File.GetLastWriteTime(txtPath.Text + "\\" + lstFiles.Text).ToLongDateString() + " - "  + File.GetLastWriteTime(txtPath.Text + "\\" + lstFiles.Text).ToLongTimeString();
+            string date = "(" + (int)(DateTime.Now - File.GetLastWriteTime(txtPath.Text + "\\" + lstFiles.Text)).TotalDays + " days old) " + File.GetLastWriteTime(txtPath.Text + "\\" + lstFiles.Text).ToShortDateString() + " @ "  + File.GetLastWriteTime(txtPath.Text + "\\" + lstFiles.Text).ToShortTimeString();
 
             int x = 0;
             foreach (string row in raw)
@@ -192,7 +192,14 @@ namespace Sedati
         {
             frmQuickNote _frmQuickNote = new frmQuickNote();
             _frmQuickNote.StartPosition = this.StartPosition;
-            _frmQuickNote.Show();
+            _frmQuickNote.ShowDialog();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            frmAbout _frmAbout = new frmAbout();
+            _frmAbout.StartPosition = this.StartPosition;
+            _frmAbout.ShowDialog();
         }
     }
 }
